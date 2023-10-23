@@ -1,6 +1,6 @@
 {
   "name": "nacosify",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "简化 nacos 的使用，提供另外一种更好接入 nacos 的 Node.js sdk",
   "author": "Chakhsu.Lau",
   "license": "MIT",  
