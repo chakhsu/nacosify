@@ -4,7 +4,7 @@
   "description": "简化 nacos 的使用，提供另外一种更好接入 nacos 的 Node.js sdk",
   "author": "Chakhsu.Lau",
   "license": "MIT",  
-  "keywords": ["nacosify", "nacos", "sdk"],
+  "keywords": ["nacosify", "nacos", "sdk", "config", "naming"],
   "repository": {
     "type": "git",
     "url": "https://github.com/chakhsu/nacosify"
