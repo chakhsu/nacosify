@@ -39,7 +39,7 @@ var Promise = require('bluebird');
 var DEFAULT_GROUP = 'DEFAULT_GROUP';
 var getReg = function (obj) {
     var id = obj.id, group = obj.group;
-    assert(id, 'easy-nacos config subscribe or unsubscribe need id');
+    assert(id, 'nacosify config subscribe or unsubscribe need id');
     return {
         dataId: id,
         group: group || DEFAULT_GROUP
@@ -70,7 +70,7 @@ var ConfigSide = /** @class */ (function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        assert(ids && ids.length > 0, 'easy-nacos ConfigSide getMore ids array is empty');
+                        assert(ids && ids.length > 0, 'nacosify ConfigSide getMore ids array is empty');
                         configs = {};
                         return [4 /*yield*/, Promise.map(ids, function (id) { return __awaiter(_this, void 0, void 0, function () {
                                 var config;

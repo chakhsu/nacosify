@@ -36,7 +36,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 var _a = require('nacos'), NacosNamingClient = _a.NacosNamingClient, NacosConfigClient = _a.NacosConfigClient;
 var assert = require('assert');
-var debug = require('debug')('easy-nacos');
+var debug = require('debug')('nacosify');
 var ServiceSide = require('./ServiceSide');
 var ConfigSide = require('./ConfigSide');
 var logger = {
@@ -61,7 +61,7 @@ var Nacos = /** @class */ (function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        assert(addr && namespace, 'easy-nacos init() params must be addr & namespace');
+                        assert(addr && namespace, 'nacosify init() params must be addr & namespace');
                         namingClientConfig = getNamingClientConfig(addr, namespace, options);
                         configClientConfig = getConfigClientConfig(addr, namespace, options);
                         this._namingClient = new NacosNamingClient(namingClientConfig);
@@ -85,9 +85,9 @@ var Nacos = /** @class */ (function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        assert(this._namingClient, 'easy-nacos please first run init()');
-                        assert(appName, 'easy-nacos register() params must be appName');
-                        assert(!this.registeredServer, "easy-nacos register error, ".concat(appName, " double registered"));
+                        assert(this._namingClient, 'nacosify please first run init()');
+                        assert(appName, 'nacosify register() params must be appName');
+                        assert(!this.registeredServer, "nacosify register error, ".concat(appName, " double registered"));
                         this.registeredServer = { appName: appName, options: options };
                         return [4 /*yield*/, this._namingClient.registerInstance(appName, options)];
                     case 1:
@@ -103,7 +103,7 @@ var Nacos = /** @class */ (function () {
             return __generator(this, function (_b) {
                 switch (_b.label) {
                     case 0:
-                        assert(this._namingClient, 'easy-nacos please first run init()');
+                        assert(this._namingClient, 'nacosify please first run init()');
                         _a = this.registeredServer, appName = _a.appName, options = _a.options;
                         return [4 /*yield*/, this._namingClient.deregisterInstance(appName, options)];
                     case 1:

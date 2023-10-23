@@ -39,7 +39,7 @@ var Promise = require('bluebird');
 var DEFAULT_GROUP = 'DEFAULT_GROUP';
 var getReg = function (obj) {
     var name = obj.name, group = obj.group;
-    assert(name, 'easy-nacos service subscribe or unsubscribe need name');
+    assert(name, 'nacosify service subscribe or unsubscribe need name');
     return {
         serviceName: name,
         groupName: group || DEFAULT_GROUP
@@ -68,7 +68,7 @@ var ServiceSide = /** @class */ (function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        assert(names && names.length > 0, 'easy-nacos ServiceSide getMore ids array is empty');
+                        assert(names && names.length > 0, 'nacosify ServiceSide getMore ids array is empty');
                         services = {};
                         return [4 /*yield*/, Promise.map(names, function (name) { return __awaiter(_this, void 0, void 0, function () {
                                 var instances;
