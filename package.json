@@ -1,0 +1,31 @@
+{
+  "name": "nacosify",
+  "version": "1.0.0",
+  "description": "简化 nacos 的使用，提供另外一种更好接入 nacos 的 Node.js sdk",
+  "author": "Chakhsu.Lau",
+  "license": "MIT",  
+  "keywords": ["nacosify", "nacos", "sdk"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chakhsu/nacosify"
+  },
+  "homepage": "https://github.com/chakhsu/nacosify",
+  "bugs": {
+    "url": "https://github.com/chakhsu/nacosify/issues"
+  },
+  "main": "index.js",
+  "types": "./types/index.d.ts",
+  "scripts": {
+    "type-gen": "tsc -d --allowJs --outDir types index.js",
+    "test": "node example.js"
+  },
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "nacos": "^2.5.1"
+  },
+  "devDependencies": {
+    "standard": "^17.1.0",
+    "typescript": "^5.1.6",
+    "debug": "^4.3.4"
+  }
+}
