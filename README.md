@@ -3,6 +3,7 @@
 本库的目标是用更容易理解和更符合直觉的方式去使用 nacos, 库名取名规则类似 simplify JSON.stringify promisify，故称为 Nacosify。
 
 设计实现：
+- 基于官方库二次封装，更加易用性
 - 将 namingClient 和 configClient 抽象成一个 client
 - 将部分通用的能力放到第一级，服务和配置相关的能力放到第二级
 - 简化了函数调用参数，统一了参数命名
