@@ -1,6 +1,7 @@
 # Nacosify
 
 [English](./README.md) | [简体中文](./README_CN.md)
+
 The goal of this library is to provide a more intuitive and easy-to-understand way of using Nacos. Following the naming convention similar to simplify JSON.stringify and promisify, it is called Nacosify.
 
 Design and implementation:
