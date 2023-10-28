@@ -1,15 +1,16 @@
 # Nacosify
 
-本库的目标是用更容易理解和更符合直觉的方式去使用 nacos, 库名取名规则类似 simplify JSON.stringify promisify，故称为 Nacosify。
+[English](./README.md) | [简体中文](./README_CN.md)
+The goal of this library is to provide a more intuitive and easy-to-understand way of using Nacos. Following the naming convention similar to simplify JSON.stringify and promisify, it is called Nacosify.
 
-设计实现：
-- 基于官方库二次封装，更加易用性
-- 将 namingClient 和 configClient 抽象成一个 client
-- 将部分通用的能力放到第一级，服务和配置相关的能力放到第二级
-- 简化了函数调用参数，统一了参数命名
-- debug 掉了健康检查的日志打印
+Design and implementation:
+- Based on the official library, it provides a higher level of usability.
+- Abstracts the namingClient and configClient into a single client.
+- Places common capabilities at the first level and service and configuration-related capabilities at the second level.
+- Simplifies function call parameters and standardizes parameter naming.
+- Disables logging for health checks.
 
-### 安装
+### Installation
 
 ```
 npm install nacosify
@@ -19,11 +20,11 @@ yarn add nacosify
 pnpm add nacosify
 ```
 
-### 使用
+### Usage
 
-更多使用例子可以查看 [`example.js`](./example.js)
+For more usage examples, refer to [`example.js`](./example.js).
 
-#### 初始化
+#### Initialization
 
 ```
 import nacos form 'nacosify'
@@ -31,48 +32,48 @@ import nacos form 'nacosify'
 await nacos.init(addr, namespace, options={})
 ```
 
-#### 服务注册
+#### Service Registration
 
 ```
-// 服务注册
+// registration
 await nacos.register(appName, options={})
-// 服务注销
+// deregistration
 await nacos.deregister()
-// 优雅退出
+// graceful exit
 await nacos.close()
-// 服务注销 & 优雅退出
+// deregistration & graceful exit
 await nacos.deregisterAndClose()
 ```
 
-#### 服务发现
+#### Service Discovery
 
 ```
-// 获取服务
+// get service
 await nacos.service.get(name, group)
 await nacos.service.getMore(names, group)
-// 订阅服务
+// subscribe to service
 const reg = { name, group }
 nacos.service.subscribe(reg, listener)
 nacos.service.unSubscribe(reg, listener)
 ```
 
-#### 配置中心
+#### Configuration Center
 
 ```
-// 获取配置
+// get configuration
 await nacos.config.get(id, group, options)
 await nacos.config.getMore(ids, group, options)
-// 订阅配置
+// subscribe to configuration
 const reg = { id, group }
 nacos.config.subscribe(reg, listener)
 nacos.config.unSubscribe(reg, listener)
 ```
 
-### 注意事项
+### Notes
 
-1. 官方的原库的参数是可以直接透传使用，不会有冲突
-2. 安装依赖会有一些包版本过低的提示，是官方库的依赖版本太低导致的，不影响使用
+1. The parameters of the original official library can be directly passed through without conflicts.
+2. Installation dependencies may show some warnings about low package versions. This is due to the low dependency versions of the official library and does not affect usage.
 
 ### License
 
-根据 MIT 许可证开源。
+Released under the MIT License.
