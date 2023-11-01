@@ -1,9 +1,9 @@
 {
   "name": "nacosify",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Simplify the usage of Nacos and provide an alternative and improved Node.js SDK for integrating with Nacos.",
   "author": "Chakhsu.Lau",
-  "license": "MIT",  
+  "license": "MIT",
   "keywords": ["nacosify", "nacos", "sdk", "config", "naming"],
   "repository": {
     "type": "git",
