@@ -1,5 +1,14 @@
 # Nacosify
 
+<p align="left">
+  <a aria-label="NPM version" href="https://www.npmjs.com/package/nacosify">
+    <img alt="" src="https://badgen.net/npm/v/nacosify">
+  </a>
+  <a aria-label="License" href="https://github.com/chakhsu/nacosify/blob/main/LICENSE">
+    <img alt="" src="https://badgen.net/npm/license/nacosify">
+  </a>
+</p>
+
 [English](./README.md) | [简体中文](./README_CN.md)
 
 本库的目标是用更容易理解和更符合直觉的方式去使用 nacos, 库名取名规则类似 simplify JSON.stringify promisify，故称为 Nacosify。
